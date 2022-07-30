@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//Use JS Module syntax to import useState from React
+import React, {useState} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// involde useState function within App function, pass 1 into useState
+// interpolate a JSX variable into the page
+// Make function global in order to use declarative rendering
+// place counter in multiple places
+function App(){
+  let [ counter, changeCounter ] = useState(1)
+    window.changeCounter = changeCounter
+    return (
+      <div>
+      <h1>{counter}</h1>
+      <h2>{counter}</h2>
+      <h5>{counter}</h5>
+      <h6>{counter}</h6>
+      </div>
+    )
 }
 
 export default App;
